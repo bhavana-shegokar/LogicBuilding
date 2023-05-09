@@ -1,0 +1,75 @@
+// Write a program which accepts the marks and display the class accordingly
+//  0 to 34         Fail
+//  35 to 49        Pass Class
+//  50 to 59        Second Class
+//  60 to 74        First Class
+// 75 to 100        First Class with Deistinction
+/*
+    Algorithm
+
+    START
+        Accept  Number as iValue
+       
+        then we call the DisplayClass() and which accept floating type of input return void
+        Perform  if ..else if..else..if
+        Display the Marks accoring to the conditions
+    STOP
+*/
+
+#include<stdio.h>  
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     CheckDivisible
+//  Input :             Integer
+//  Output :            Boolean
+//  Description :       Checks whether input is divisible by 3 and 5     
+//  Author :            Bhavana Atul shegokar
+//  Date :              26/04/2023
+//
+//////////////////////////////////////////////////////////////////////////
+ void DisplayClass(flaot fMarks)
+ {
+    if((fMarks < 0.0f)||(fMarks > 100.0f))
+    {
+        printf("Invalid Input\n");
+        printf("Please enter the markes in between the range 0 to 100");
+        return;
+    }
+    if ((fMarks >= 0.0f) && (fMarks < 35.00f))
+    {
+        printf("you are Fail\n");
+    }
+    else if ((fMarks >= 35.0f) && (fMarks < 50.00f))
+    {
+        printf("you got pass Class\n");
+    }
+    else if ((fMarks >= 50.0f) && (fMarks < 60.00f))
+    {
+        printf("you got Second Class\n");
+    }
+    else if ((fMarks >= 60.0f) && (fMarks < 75.00f))
+    {
+        printf("you got First Class\n");
+    }
+    else if ((fMarks >= 75.0f) && (fMarks <= 100.00f))
+    {
+        printf("you got First Class with Distinction\n");
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////
+// Entry Point function
+//////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    flaot fValue = 0.0f;
+
+    printf(" Please Enter Your percentage:\n");
+    scanf("%f",iValue);
+
+    DisplayClass(fValue);
+
+    return 0;
+}
